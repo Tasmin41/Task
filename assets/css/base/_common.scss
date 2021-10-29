@@ -1,0 +1,79 @@
+@import 'color';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 1320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin:0 auto;
+  }
+.fix:before,.fix:after{
+    content: "";
+    clear: both;
+    display: table;
+}
+a{
+    text-decoration: none;
+    color:$black;
+    transition: 0.3s;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+ul{
+    list-style: none;
+}
+
+.btn{
+    color:$white;
+    padding: 10px 40px;
+    border-radius:3px ;
+    text-transform: capitalize;
+    font-size: 18px;
+    display: inline-block;
+    &.box-btn{
+        background-color: $primary_color;
+        transition: .3s;
+        &:hover{
+            background-color: $black;
+        }
+    }
+    &.border-btn{
+        border: 2px solid $primary_color;
+        padding: 8px 40px;
+        transition: .3s;
+        &:hover{
+            border-color: $black;
+            color: $primary_color;
+        }
+    }
+
+}
+
+/*Margin & Padding */
+@for $i from 1  through 10{
+    .pt-#{$i * 10}{
+        padding-top: $i * 10px;
+    }
+    .pb-#{$i * 10}{
+        padding-bottom: $i * 10px;
+    }
+    .mt-#{$i * 10}{
+        margin-top: $i * 10px;
+    }
+    .mb-#{$i * 10}{
+        margin-bottom: $i * 10px;
+    }
+}
+$list:left,center,right,justify;
+@each $i in $list{
+    .text-#{$i}{
+        text-align:$i;
+    }
+}

@@ -1,0 +1,25 @@
+.right-div {
+    width: 660px;
+    background-color:$right_div_bg;
+    padding: 30px 60px 30px 30px;
+    ul {
+        list-style: none;
+        text-align: end;
+        li {
+            display: inline-block;
+            margin-left: 50px;
+            a {
+                text-decoration: none;
+                font-size: 14px;
+                color: $black;
+              }
+          }
+      }
+     
+  }
+  .border-btn{
+    border: 1px solid $black;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+ 
